@@ -1,0 +1,19 @@
+{
+    "/api": {
+        "target": "http://localhost:8081",
+        "secure": false,
+        "timeout": 2147483647
+    },
+    "/docs/*": {
+        "target": "http://localhost:8000",
+        "secure": false,
+        "timeout": 2147483647,
+        "pathRewrite": {
+            "/docs": "",
+            "/":"http://localhost:8000/"
+          },
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "headers": { "Access-Control-Allow-Origin": "*", "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS", "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization" }
+    }
+}

@@ -1,0 +1,12 @@
+flask
+tornado
+opencv-python
+mkdocs
+scikit-learn
+tqdm
+numpy
+imutils
+numba
+filterpy
+
+llvmlite

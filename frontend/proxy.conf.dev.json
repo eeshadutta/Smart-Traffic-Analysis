@@ -1,0 +1,24 @@
+{
+  "/api": {
+    "target": "http://0.0.0.0:8081/",
+    "secure": false,
+    "changeOrigin": true,
+    "timeout": 2147483647
+  },
+  "/docs/*": {
+    "target": "http://[::1]:8000/",
+    "secure": false,
+    "timeout": 2147483647,
+    "pathRewrite": {
+      "/docs": "",
+      "/": "http://0.0.0.0:8000/"
+    },
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "headers": {
+      "Access-Control-Allow-Origin": "*",
+      "Access-Control-Allow-Methods": "GET, POST, PUT, DELETE, PATCH, OPTIONS",
+      "Access-Control-Allow-Headers": "X-Requested-With, content-type, Authorization"
+    }
+  }
+}
